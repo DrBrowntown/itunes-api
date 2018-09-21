@@ -1,4 +1,4 @@
-// 1. Create a github Repo or Click 'Fork' from the top menu and generate your own JSFiddle link. 
+// 1. Create a github Repo or Click 'Fork' from the top menu and generate your own JSFiddle link.
 // Be sure to click 'Update' when your work is done.
 
 // 2. Create a Search Component for entering an Artist
@@ -12,20 +12,26 @@
 
 // 6. Checkin or Click Update from the top Menu and save the link
 
+var ages = [32, 33, 16, 40];
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.every(checkAdult);
+}
+
 class Hello extends React.Component {
   render() {
     const { name } = this.props;
     return (
       <div>
-        Hello {name}!!
+        Hello {name}
+        !!
       </div>
     );
   }
 }
 
-ReactDOM.render(
-  <Hello name="World"/>,
-  document.getElementById('container')
-);
-
-
+ReactDOM.render(<Hello name="World" />, document.getElementById("container"));
